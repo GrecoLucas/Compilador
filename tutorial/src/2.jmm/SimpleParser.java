@@ -1,7 +1,7 @@
-package pt.up.fe.comp2024;
+package pt.up.fe.comp2025;
 
-import pt.up.fe.comp2024.JavammLexer;
-import pt.up.fe.comp2024.JavammParser;
+import pt.up.fe.comp2025.JavammLexer;
+import pt.up.fe.comp2025.JavammParser;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import pt.up.fe.comp.jmm.ast.antlr.AntlrParser;

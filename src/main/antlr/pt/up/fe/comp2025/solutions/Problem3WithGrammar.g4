@@ -1,7 +1,7 @@
 grammar Problem3WithGrammar;
 
 @header {
-    package pt.up.fe.comp2024;
+    package pt.up.fe.comp2025.solutions;
 }
 
 // Define tokens for email

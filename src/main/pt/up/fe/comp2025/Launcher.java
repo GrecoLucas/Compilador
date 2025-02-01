@@ -1,7 +1,10 @@
-package pt.up.fe.comp2024;
+package pt.up.fe.comp2025;
 
 import org.antlr.v4.runtime.*;
 import org.junit.Test;
+import pt.up.fe.specs.util.SpecsSystem;
+
+import pt.up.fe.comp2025.solutions.*;
 
 import java.util.function.Function;
 
@@ -218,9 +221,9 @@ public class Launcher {
 
         // Transforms tokens into a parse tree
         var parser = parserProvider.apply(tokens);
-        parser.
-                // Call parser
-                        SpecsSystem.invoke(parser, topRule);
+
+        // Call parser
+        SpecsSystem.invoke(parser, topRule);
     }
 
     /*
@@ -246,13 +249,13 @@ public class Launcher {
         System.out.println("Testing Problem1 with grammar");
 
         // Will be interpreted as a single IP token
-        printTokens("11.111.200.255", pt.up.fe.comp2024.Problem1WithGrammarLexer::new);
+        printTokens("11.111.200.255", Problem1WithGrammarLexer::new);
         /*
         [@-1,0:11='11.1.200.255',<1>,1:0]
          */
 
         // Will tokenize as "25" and "6", since 256 is not a valid token
-        printTokens("256", pt.up.fe.comp2024.Problem1WithGrammarLexer::new);
+        printTokens("256", Problem1WithGrammarLexer::new);
         /*
         [@-1,0:1='25',<2>,1:0]
         [@-1,2:2='6',<2>,1:2]

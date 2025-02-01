@@ -1,10 +1,8 @@
-grammar IPV4;
+grammar Problem1WithGrammar;
 
 @header {
-    package pt.up.fe.comp2024;
+    package pt.up.fe.comp2025.solutions;
 }
-
-IP: IP_NUMBER '.' IP_NUMBER '.' IP_NUMBER '.' IP_NUMBER ;
 
 IP_NUMBER : [0-9] | [0-9] [0-9] | '1' [0-9] [0-9] | '2' [0-4] [0-9] | '2' '5' [0-5];
 
@@ -12,8 +10,8 @@ IP_NUMBER : [0-9] | [0-9] [0-9] | '1' [0-9] [0-9] | '2' [0-4] [0-9] | '2' '5' [0
 //INTEGER : [0-9] ;
 
 // Ignore white space
-WS : [ \t\n\r\f]+ -> skip ;
+//WS : [ \t\n\r\f]+ -> skip ;
 
 // If there is no grammar rule, ANTLR does not compile
 // Adding this dummy rule
-program: EOF;
+ip: IP_NUMBER '.' IP_NUMBER '.' IP_NUMBER '.' IP_NUMBER ;

@@ -1,7 +1,7 @@
 grammar IPV4Relaxed;
 
 @header {
-    package pt.up.fe.comp2024;
+    package pt.up.fe.comp2025;
 }
 
 // Defines any integer

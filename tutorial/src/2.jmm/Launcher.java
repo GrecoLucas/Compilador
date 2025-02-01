@@ -1,4 +1,4 @@
-package pt.up.fe.comp2024;
+package pt.up.fe.comp2025;
 
 import java.io.File;
 import java.util.Arrays;

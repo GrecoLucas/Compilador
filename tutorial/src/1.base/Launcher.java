@@ -1,4 +1,4 @@
-package pt.up.fe.comp2024;
+package pt.up.fe.comp2025;
 
 import java.io.File;
 import java.util.Arrays;
@@ -46,11 +46,11 @@ public class Launcher {
         // Convert code string into a character stream
         var input = new ANTLRInputStream(code);
         // Transform characters into tokens using the lexer
-        var lex = new pt.up.fe.comp2024.JavammLexer(input);
+        var lex = new pt.up.fe.comp2025.JavammLexer(input);
         // Wrap lexer around a token stream
         var tokens = new CommonTokenStream(lex);
         // Transform tokens into a parse tree
-        var parser = new pt.up.fe.comp2024.JavammParser(tokens);
+        var parser = new pt.up.fe.comp2025.JavammParser(tokens);
         System.out.println(Arrays.asList(parser.ignoreList));
         ParseTree root = parser.program();
 
