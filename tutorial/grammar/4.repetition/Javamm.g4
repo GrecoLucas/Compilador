@@ -1,7 +1,7 @@
 grammar Javamm;
 
 @header {
-    package pt.up.fe.comp2024;
+    package pt.up.fe.comp2025;
 }
 
 INTEGER : [0-9]+ ;

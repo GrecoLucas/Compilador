@@ -4,7 +4,7 @@ For this tutorial, you need to install [Java](https://jdk.java.net/), [Gradle](h
 
 ## Project setup
 
-There are some import folders in the repository. Your development source code is inside the subfolder named ``src/main``. Specifically, your initially application is in the folder ``src/main/pt/up/fe/comp2024``, and the grammar is in the subfolder ``src/main/antlr/comp2024/grammar``. Finally, the subfolder named ``tutorial`` contains code solutions for each step of the tutorial.
+There are some import folders in the repository. Your development source code is inside the subfolder named ``src/main``. Specifically, your initially application is in the folder ``src/main/pt/up/fe/comp2025``, and the grammar is in the subfolder ``src/main/antlr/comp2025/grammar``. Finally, the subfolder named ``tutorial`` contains code solutions for each step of the tutorial.
 
 ## Compile and Running
 
