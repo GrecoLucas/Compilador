@@ -1,27 +1,17 @@
 package pt.up.fe.comp2025;
 
-import java.io.File;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.antlr.v4.gui.TreeViewer;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.Trees;
-import pt.up.fe.comp.TestUtils;
-import pt.up.fe.comp.jmm.ast.antlr.AntlrParser;
-import pt.up.fe.comp.jmm.parser.JmmParserResult;
-import pt.up.fe.comp.jmm.report.Report;
-import pt.up.fe.comp.jmm.report.ReportType;
-import pt.up.fe.comp.jmm.report.Stage;
 import pt.up.fe.specs.util.SpecsIo;
 import pt.up.fe.specs.util.SpecsLogs;
 import pt.up.fe.specs.util.SpecsSystem;
 
-import javax.swing.*;
+import java.io.File;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Launcher {
 
@@ -46,12 +36,11 @@ public class Launcher {
         // Convert code string into a character stream
         var input = new ANTLRInputStream(code);
         // Transform characters into tokens using the lexer
-        var lex = new pt.up.fe.comp2025.JavammLexer(input);
+        var lex = new JavammLexer(input);
         // Wrap lexer around a token stream
         var tokens = new CommonTokenStream(lex);
         // Transform tokens into a parse tree
-        var parser = new pt.up.fe.comp2025.JavammParser(tokens);
-        System.out.println(Arrays.asList(parser.ignoreList));
+        var parser = new JavammParser(tokens);
         ParseTree root = parser.program();
 
 
