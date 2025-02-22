@@ -18,13 +18,16 @@ program
 
 statement
     : expression ';' #ExprStmt
-    | var=ID '=' value=INTEGER ';' #Assignment
+    | var=ID '=' value=expression ';' #Assignment
     ;
 
 // mudando a  ordem, muda a prioridade, tem como mudar a prioridade com parenteses, com os parenteses a prioridade é a mesma
 expression
-    : expression op=('*' | '/') expression #BinaryOp
+    : '(' expression ')' #Parentheses
+    | expression op=('*' | '/') expression #BinaryOp
     | expression op=('+' | '-') expression #BinaryOp
+    | expression op='<' expression #Comparison
+    | expression op='&&' expression #LogicalAnd
     | value=INTEGER #Integer
     | value=ID #Identifier
     | value=IP #Identifier
