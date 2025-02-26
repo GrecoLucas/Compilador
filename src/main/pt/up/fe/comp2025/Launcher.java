@@ -43,10 +43,10 @@ public class Launcher {
         TestUtils.noErrors(parserResult.getReports());
 
         // ... add remaining stages
-        JavaCalcGenerator gen = new JavaCalcGenerator("Calculator");
-        String generatedCode = gen.visit(parserResult.getRootNode(), "");
+        //JavaCalcGenerator gen = new JavaCalcGenerator("Calculator");
+        //String generatedCode = gen.visit(parserResult.getRootNode(), "");
 
-        System.out.println(generatedCode);
+        //System.out.println(generatedCode);
 
     }
 
